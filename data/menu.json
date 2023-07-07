@@ -1,0 +1,39 @@
+{
+  "menu": [
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu1.JPG",
+      "price": "3,000"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu2.JPG",
+      "price": "2,000"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu3.JPG",
+      "price": "2,400"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu4.JPG",
+      "price": "2,800"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu5.JPG",
+      "price": "3,400"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu6.JPG",
+      "price": "3,300"
+    },
+    {
+      "name": "Harami Steak",
+      "img": "./src/image/menu7.JPG",
+      "price": "1,800"
+    }
+  ]
+}
