@@ -7,6 +7,7 @@ import Check from './features/check/Check';
 import CreatedOrder from './features/order/CreatedOrder';
 import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
+import FinishedCheck from './features/check/FinishedCheck';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: 'Check',
         element: <Check />,
+      },
+      {
+        path: 'Check/finished',
+        element: <FinishedCheck />,
       },
     ],
   },

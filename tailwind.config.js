@@ -15,6 +15,9 @@ export default {
         screen: '100dvh',
         partscreen: 'calc(100dvh - 80px)',
       },
+      backgroundImage: {
+        'custom-background': 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))',
+      },
     },
   },
   plugins: [],

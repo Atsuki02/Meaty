@@ -1,6 +1,14 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCurrentQuantityById } from '../cart/cartSlice';
+import { formatCurrency } from '../../utils/helper';
+import UpdateItemQuantity from '../cart/updateItemQuantity';
 
 function MenuItem({ item, i }) {
+  const dispatch = useDispatch();
+  const { id, unitPrice, name, img } = item;
+
+  // const isInCart = currentQuantity > 0;
   const [soldOut, setSoldOut] = useState(false);
   const [count, setCount] = useState(0);
 
@@ -9,41 +17,22 @@ function MenuItem({ item, i }) {
       key={i}
       className="flex flex-col gap-4 py-2 lg:flex-row lg:gap-8 lg:py-8"
     >
-      <img src={item.img} alt="" className="lg:h-68 lg:w-80" />
+      <img src={img} alt="" className="lg:h-68 lg:w-80" />
       <div className="flex grow justify-between">
         <div className="m-5 flex flex-col justify-around lg:items-start lg:justify-center">
-          <p>{item.name}</p>
+          <p>{name}</p>
           {!soldOut ? (
-            <p>{item.price} &yen;</p>
+            <p>{formatCurrency(unitPrice)}</p>
           ) : (
             <p className="text-sm font-medium uppercase text-stone-500">
               Sold out
             </p>
           )}
         </div>
-        <div className=" mr-10 flex flex-row items-center justify-end space-x-4 text-lg">
-          <button
-            onClick={() => (count > 0 ? setCount((cur) => cur - 1) : null)}
-            className="h-8 w-8 rounded-full bg-white text-black"
-          >
-            -
-          </button>
-          <span>{count}</span>
-          <button
-            onClick={() => setCount((cur) => cur + 1)}
-            className="h-8 w-8 rounded-full bg-white text-black"
-          >
-            +
-          </button>
-        </div>
+        <UpdateItemQuantity item={item} />
       </div>
     </li>
   );
-}
-{
-  /* <div className="m-5 hidden items-center lg:mr-4 lg:flex">
-  <Button>Add to cart</Button>
-</div> */
 }
 
 export default MenuItem;
