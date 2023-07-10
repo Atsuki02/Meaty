@@ -8,7 +8,7 @@
       "id": 1
     },
     {
-      "name": "Special Salted Tongue",
+      "name": "Special Beef Tongue",
       "img": "/src/image/menu2.JPG",
       "unitPrice": 1980,
       "type": "main",
@@ -36,7 +36,7 @@
       "id": 5
     },
     {
-      "name": "Japanese Beef Knuckle",
+      "name": "Premium Flap Meat",
       "img": "/src/image/menu6.JPG",
       "unitPrice": 2068,
       "type": "main",
@@ -64,7 +64,7 @@
       "id": 9
     },
     {
-      "name": "Premium Seared Beef Toro Onigiri",
+      "name": "Beef Toro Onigiri",
       "img": "/src/image/menu10.JPG",
       "unitPrice": 1980,
       "type": "main",
@@ -78,23 +78,23 @@
       "id": 11
     },
     {
-      "name": "Assorted Kimchi",
+      "name": "Kimchi Assort",
       "img": "/src/image/menu12.JPG",
       "unitPrice": 1023,
       "type": "side",
       "id": 12
     },
     {
-      "name": "Namul",
+      "name": "Fresh Sesame",
       "img": "/src/image/menu13.JPG",
-      "unitPrice": 770,
+      "unitPrice": 880,
       "type": "side",
       "id": 13
     },
     {
-      "name": "Fresh Sesame",
+      "name": "Namul",
       "img": "/src/image/menu14.JPG",
-      "unitPrice": 880,
+      "unitPrice": 770,
       "type": "side",
       "id": 14
     },
@@ -106,14 +106,14 @@
       "id": 15
     },
     {
-      "name": "Stone Bibimbap",
+      "name": "Stone-roasted Bibimbap",
       "img": "/src/image/menu16.JPG",
       "unitPrice": 1078,
       "type": "side",
       "id": 16
     },
     {
-      "name": "Japanese-style Chishasalad",
+      "name": "Lettuce Salad",
       "img": "/src/image/menu17.JPG",
       "unitPrice": 1045,
       "type": "side",
@@ -127,7 +127,7 @@
       "id": 18
     },
     {
-      "name": "Cold Noodles",
+      "name": "Korean Cold Noodles",
       "img": "/src/image/menu19.JPG",
       "unitPrice": 1045,
       "type": "side",
