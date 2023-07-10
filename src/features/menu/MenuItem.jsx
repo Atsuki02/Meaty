@@ -11,7 +11,11 @@ function MenuItem({ item, i }) {
       key={i}
       className="flex flex-col gap-4 py-2 lg:flex-row lg:gap-8 lg:py-8"
     >
-      <img src={img} alt="" className="lg:h-68 lg:w-80" />
+      <img
+        src={new URL(`${img}`, import.meta.url).pathname}
+        alt=""
+        className="lg:h-68 lg:w-80"
+      />
       <div className="flex grow justify-between">
         <div className="m-5 flex flex-col justify-around lg:items-start lg:justify-center lg:text-lg">
           <p>{name}</p>
