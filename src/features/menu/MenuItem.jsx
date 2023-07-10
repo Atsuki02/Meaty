@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { formatCurrency } from '../../utils/helper';
-import UpdateItemQuantity from '../cart/updateItemQuantity';
+import UpdateItemQuantity from '../cart/UpdateItemQuantity';
 
 function MenuItem({ item, i }) {
   const { unitPrice, name, img } = item;
