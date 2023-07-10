@@ -1,17 +1,13 @@
 export async function getMenu() {
-  return fetch("http://localhost:3000/menu")
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Failed getting menu");
-      }
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      return data;
-    })
-    .catch((err) => {
-      console.error("Error", err);
-      throw err;
-    });
+  try {
+    const res = await fetch('http://localhost:3000/menu');
+    if (!res.ok) {
+      throw new Error('Failed getting menu');
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error('Error', error);
+    throw error;
+  }
 }

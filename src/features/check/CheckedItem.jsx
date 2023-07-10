@@ -1,7 +1,8 @@
 import React from 'react';
 import { formatCurrency } from '../../utils/helper';
 
-function CheckedItem({ name, price, quantity, menuId, totalPrice }) {
+function CheckedItem({ item }) {
+  const { name, quantity, totalPrice } = item;
   return (
     <li className="py-3 lg:flex lg:items-center lg:justify-between lg:px-4 lg:py-6">
       <p className="mb-1 lg:mb-0">

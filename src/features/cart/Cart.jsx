@@ -6,16 +6,26 @@ import { clearCart, getCart, getTotalCartPrice } from './cartSlice';
 import { formatCurrency } from '../../utils/helper';
 import EmptyCart from './EmptyCart';
 import LinkButton from '../../ui/LinkButton';
+import { addOrder } from '../order/orderSlice';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const cart = useSelector(getCart);
   const totalCartPrice = useSelector(getTotalCartPrice);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleAddToOrderedList() {
+    console.log(cart);
+    dispatch(addOrder(...cart));
+    dispatch(clearCart());
+    navigate('/order');
+  }
 
   if (!cart.length) return <EmptyCart />;
 
   return (
-    <div className="bg-black px-4 py-3 text-white">
+    <div className="min-h-partscreen bg-black px-4 py-3 text-white">
       <div className="mt-4 flex items-center justify-center">
         <LinkButton to="/menu">&larr; Back to menu</LinkButton>
       </div>
@@ -29,7 +39,7 @@ function Cart() {
         Toatl : {formatCurrency(totalCartPrice)}
       </p>
       <div className="my-6 space-x-4 text-center lg:my-10 lg:space-x-14">
-        <Button to="/order/created" type="primary">
+        <Button type="primary" onClick={handleAddToOrderedList}>
           Submit order
         </Button>
         <Button type="primary2" onClick={() => dispatch(clearCart())}>

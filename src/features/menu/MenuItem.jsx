@@ -1,16 +1,10 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCurrentQuantityById } from '../cart/cartSlice';
 import { formatCurrency } from '../../utils/helper';
 import UpdateItemQuantity from '../cart/updateItemQuantity';
 
 function MenuItem({ item, i }) {
-  const dispatch = useDispatch();
-  const { id, unitPrice, name, img } = item;
-
-  // const isInCart = currentQuantity > 0;
+  const { unitPrice, name, img } = item;
   const [soldOut, setSoldOut] = useState(false);
-  const [count, setCount] = useState(0);
 
   return (
     <li
@@ -19,7 +13,7 @@ function MenuItem({ item, i }) {
     >
       <img src={img} alt="" className="lg:h-68 lg:w-80" />
       <div className="flex grow justify-between">
-        <div className="m-5 flex flex-col justify-around lg:items-start lg:justify-center">
+        <div className="m-5 flex flex-col justify-around lg:items-start lg:justify-center lg:text-lg">
           <p>{name}</p>
           {!soldOut ? (
             <p>{formatCurrency(unitPrice)}</p>

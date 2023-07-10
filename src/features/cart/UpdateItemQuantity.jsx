@@ -43,7 +43,6 @@ function UpdateItemQuantity({ item }) {
             </Button>
           </>
         )}
-
         {!isInCart && (
           <Button type="small" onClick={handleAddToCart}>
             Add to cart

@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { createTableNumber } from './userSlice';
 
 function CreateUser() {
-  const [tableNumber, setTableNumber] = useState(0);
+  const [tableNumber, setTableNumber] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -18,17 +18,17 @@ function CreateUser() {
     navigate('/menu');
   }
   return (
-    <form onSubmit={handleSubmit} className="">
+    <form onSubmit={handleSubmit}>
       <div className="items-center lg:flex lg:justify-center lg:py-10">
         <h2 className="pb-2 text-left text-sm lg:pb-0 lg:text-lg">
           Plasee start by telling your table number:
         </h2>
         <input
           value={tableNumber}
-          onChange={(e) => setTableNumber(e.target.value)}
+          onChange={(e) => setTableNumber(Number(e.target.value))}
           type="number"
           placeholder="0"
-          className="mx-auto mb-10 mt-2 block rounded-xl px-6 py-2 text-black lg:my-0 lg:ml-6 "
+          className="mx-auto mb-10 mt-2 block rounded-xl px-6 py-2 text-black  focus:outline-red-800 lg:my-0 lg:ml-6 "
           min="1"
           max="15"
         />

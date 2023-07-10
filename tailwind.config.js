@@ -4,7 +4,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: 'Roboto Mono, monospace',
+      sans: 'Cardo',
     },
 
     extend: {
@@ -15,8 +15,15 @@ export default {
         screen: '100dvh',
         partscreen: 'calc(100dvh - 80px)',
       },
+      minHeight: {
+        screen: '100dvh',
+        partscreen: 'calc(100dvh - 80px)',
+      },
       backgroundImage: {
         'custom-background': 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))',
+      },
+      fontFamily: {
+        main: 'Cardo',
       },
     },
   },

@@ -1,83 +1,38 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { getMenu } from '../../Services/apiMenu';
 import Button from '../../ui/Button';
+import { getOrderedList, getTotalOrderedListPrice } from '../order/orderSlice';
 import CheckedItem from './CheckedItem';
-
-const fakeOrderedList = [
-  {
-    name: 'Harami Steak',
-    price: 3000,
-    quantity: 4,
-    menuId: 1,
-    totalPrice: 12000,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2000,
-    quantity: 3,
-    menuId: 2,
-    totalPrice: 6000,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2400,
-    quantity: 2,
-    menuId: 3,
-    totalPrice: 4800,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2400,
-    quantity: 2,
-    menuId: 4,
-    totalPrice: 4800,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2400,
-    quantity: 2,
-    menuId: 5,
-    totalPrice: 4800,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2400,
-    quantity: 2,
-    menuId: 6,
-    totalPrice: 4800,
-  },
-  {
-    name: 'Harami Steak',
-    price: 2400,
-    quantity: 2,
-    menuId: 7,
-    totalPrice: 4800,
-  },
-];
+import { useNavigate } from 'react-router-dom';
+import { clearCart } from '../cart/cartSlice';
+import { formatCurrency } from '../../utils/helper';
 
 function Check() {
-  const checkList = fakeOrderedList;
+  const orderedList = useSelector(getOrderedList);
+  const totalBillPrice = useSelector(getTotalOrderedListPrice);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function handlePayBill() {
+    dispatch(clearCart());
+    navigate('/check/finished');
+  }
   return (
-    <div className="bg-black px-4 py-3 text-white">
+    <div className="min-h-partscreen bg-black px-4 py-3  text-white">
       <div className="mt-4 flex items-center justify-center">
         <Button to="/menu">&larr; Back to menu</Button>
       </div>
       <h2 className="mt-10 text-lg font-semibold">Your Orders</h2>
       <ul className="mt-3 divide-y divide-stone-200 border-b ">
-        {checkList.map((item) => (
-          <CheckedItem
-            name={item.name}
-            price={item.price}
-            quantity={item.quantity}
-            totalPrice={item.totalPrice}
-            key={item.menuId}
-          />
+        {orderedList.map((item, i) => (
+          <CheckedItem item={item} key={i} />
         ))}
       </ul>
       <p className="border-t-stone-200 py-10 text-lg font-semibold lg:pr-14 lg:text-right">
-        Toatl : 150,000
+        Toatl : {formatCurrency(totalBillPrice)}
       </p>
       <div className="my-6 space-x-4 text-center lg:my-10 lg:space-x-14">
-        <Button to="/check/finished" type="primary">
+        <Button type="primary" onClick={handlePayBill}>
           Pay bill
         </Button>
       </div>

@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Button from '../../ui/Button';
 import { formatCurrency } from '../../utils/helper';
-import { deleteItem, getCurrentQuantityById } from './cartSlice';
+import { deleteItem } from './cartSlice';
 import UpdateItemQuantity from './updateItemQuantity';
 
 function CartItem({ item }) {
-  const { name, price, quantity, id, totalPrice } = item;
+  const { name, quantity, id, totalPrice } = item;
   const dispatch = useDispatch();
   return (
     <li className="py-3 lg:flex lg:items-center lg:justify-between lg:px-4 lg:py-6">
