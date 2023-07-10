@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import Button from '../../ui/Button';
 import { formatCurrency } from '../../utils/helper';
 import { deleteItem } from './cartSlice';
-import UpdateItemQuantity from './updateItemQuantity';
+import UpdateItemQuantity from './UpdateItemQuantity';
 
 function CartItem({ item }) {
   const { name, quantity, id, totalPrice } = item;
