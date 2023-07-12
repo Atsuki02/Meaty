@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getMenu } from '../../Services/apiMenu';
 import Button from '../../ui/Button';
 import { getOrderedList, getTotalOrderedListPrice } from '../order/orderSlice';
 import CheckedItem from './CheckedItem';
@@ -38,11 +37,6 @@ function Check() {
       </div>
     </div>
   );
-}
-
-export async function loader() {
-  const cart = await getMenu();
-  return cart;
 }
 
 export default Check;

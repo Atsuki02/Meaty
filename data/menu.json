@@ -1,137 +1,19 @@
 {
-  "menu": [
+  "posts": [
     {
-      "name": "Harami Steak",
-      "img": "/image/menu1.JPG",
-      "unitPrice": 3630,
-      "type": "main",
-      "id": 1
-    },
-    {
-      "name": "Special Beef Tongue",
-      "img": "/image/menu2.JPG",
-      "unitPrice": 1980,
-      "type": "main",
-      "id": 2
-    },
-    {
-      "name": "Premium Harami",
-      "img": "/image/menu3.JPG",
-      "unitPrice": 1738,
-      "type": "main",
-      "id": 3
-    },
-    {
-      "name": "Premium Kalbi",
-      "img": "/image/menu4.JPG",
-      "unitPrice": 2420,
-      "type": "main",
-      "id": 4
-    },
-    {
-      "name": "Premium Sirloin",
-      "img": "/image/menu5.JPG",
-      "unitPrice": 2420,
-      "type": "main",
-      "id": 5
-    },
-    {
-      "name": "Premium Flap Meat",
-      "img": "/image/menu6.JPG",
-      "unitPrice": 2068,
-      "type": "main",
-      "id": 6
-    },
-    {
-      "name": "Sukiyaki Harami",
-      "img": "/image/menu7.JPG",
-      "unitPrice": 1848,
-      "type": "main",
-      "id": 7
-    },
-    {
-      "name": "Premium Tongue Yukke",
-      "img": "/image/menu8.JPG",
-      "unitPrice": 1980,
-      "type": "main",
-      "id": 8
-    },
-    {
-      "name": "Yukke with Mayonnaise",
-      "img": "/image/menu9.JPG",
-      "unitPrice": 1100,
-      "type": "main",
-      "id": 9
-    },
-    {
-      "name": "Beef Toro Onigiri",
-      "img": "/image/menu10.JPG",
-      "unitPrice": 1980,
-      "type": "main",
-      "id": 10
-    },
-    {
-      "name": "Jyo Mino",
-      "img": "/image/menu11.JPG",
-      "unitPrice": 968,
-      "type": "main",
-      "id": 11
-    },
-    {
-      "name": "Kimchi Assort",
-      "img": "/image/menu12.JPG",
-      "unitPrice": 1023,
-      "type": "side",
-      "id": 12
-    },
-    {
-      "name": "Fresh Sesame",
-      "img": "/image/menu13.JPG",
-      "unitPrice": 880,
-      "type": "side",
-      "id": 13
-    },
-    {
-      "name": "Namul",
-      "img": "/image/menu14.JPG",
-      "unitPrice": 770,
-      "type": "side",
-      "id": 14
-    },
-    {
-      "name": "Bibimbap",
-      "img": "/image/menu15.JPG",
-      "unitPrice": 935,
-      "type": "side",
-      "id": 15
-    },
-    {
-      "name": "Stone-roasted Bibimbap",
-      "img": "/image/menu16.JPG",
-      "unitPrice": 1078,
-      "type": "side",
-      "id": 16
-    },
-    {
-      "name": "Lettuce Salad",
-      "img": "/image/menu17.JPG",
-      "unitPrice": 1045,
-      "type": "side",
-      "id": 17
-    },
-    {
-      "name": "Egg Soup",
-      "img": "/image/menu18.JPG",
-      "unitPrice": 528,
-      "type": "side",
-      "id": 18
-    },
-    {
-      "name": "Korean Cold Noodles",
-      "img": "/image/menu19.JPG",
-      "unitPrice": 1045,
-      "type": "side",
-      "id": 19
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
     }
-  ]
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

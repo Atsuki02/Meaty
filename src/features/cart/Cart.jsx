@@ -1,6 +1,5 @@
 import CartItem from './CartItem';
 import Button from '../../ui/Button';
-import { getMenu } from '../../Services/apiMenu';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, getCart, getTotalCartPrice } from './cartSlice';
 import { formatCurrency } from '../../utils/helper';
@@ -16,7 +15,6 @@ function Cart() {
   const navigate = useNavigate();
 
   function handleAddToOrderedList() {
-    console.log(cart);
     dispatch(addOrder(...cart));
     dispatch(clearCart());
     navigate('/order');
@@ -48,11 +46,6 @@ function Cart() {
       </div>
     </div>
   );
-}
-
-export async function loader() {
-  const cart = await getMenu();
-  return cart;
 }
 
 export default Cart;

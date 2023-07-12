@@ -1,10 +1,8 @@
-import { getMenu } from '../../Services/apiMenu';
-import { useLoaderData } from 'react-router-dom';
+import { menu } from '../../../data/menu';
 import MenuItem from './MenuItem';
 import { useState } from 'react';
 
 function Menu() {
-  const menu = useLoaderData();
   const [selectedType, setSelectedType] = useState('main');
   return (
     <div className="min-h-partscreen bg-black ">
@@ -28,11 +26,6 @@ function Menu() {
       </ul>
     </div>
   );
-}
-
-export async function loader() {
-  const menu = await getMenu();
-  return menu;
 }
 
 export default Menu;
