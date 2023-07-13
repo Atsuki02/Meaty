@@ -15,7 +15,7 @@ function Cart() {
   const navigate = useNavigate();
 
   function handleAddToOrderedList() {
-    dispatch(addOrder(...cart));
+    dispatch(addOrder(cart));
     dispatch(clearCart());
     navigate('/order');
   }

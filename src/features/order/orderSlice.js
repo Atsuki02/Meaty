@@ -9,7 +9,7 @@ const orderSlice = createSlice({
   initialState,
   reducers: {
     addOrder(state, action) {
-      state.orderedList.push(action.payload);
+      state.orderedList.push(...action.payload);
     },
   },
 });
