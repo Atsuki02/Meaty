@@ -20,8 +20,8 @@ function CreateUser() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="items-center lg:flex lg:justify-center lg:py-10">
-        <h2 className="pb-2 text-left text-sm lg:pb-0 lg:text-lg">
-          Plasee start by telling your table number:
+        <h2 className="pb-2 text-left text-base font-bold text-slate-200 lg:pb-0 lg:text-lg">
+          Plasee tell your table number:
         </h2>
         <input
           value={tableNumber}
@@ -34,7 +34,7 @@ function CreateUser() {
         />
       </div>
       <Button type="primary">
-        <span className="pr-3">Let's order</span>
+        <span className="pr-3">Start order</span>
         <FontAwesomeIcon icon={faBowlFood} size="lg" />
       </Button>
     </form>

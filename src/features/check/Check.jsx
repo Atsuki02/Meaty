@@ -32,7 +32,7 @@ function Check() {
       </p>
       <div className="my-6 space-x-4 text-center lg:my-10 lg:space-x-14">
         <Button type="primary" onClick={handlePayBill}>
-          Pay bill
+          Proceed to Payment
         </Button>
       </div>
     </div>
