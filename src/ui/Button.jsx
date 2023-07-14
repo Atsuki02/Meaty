@@ -11,7 +11,7 @@ function Button({ children, disabled, to, type, onClick }) {
     small: base + ' px-4 py-2 md:px-5 md:py-2.5 text-xs',
     round:
       base +
-      ' px-2.5 py-1.5 md:px-3.5 md:py-2.5 text-xs lg:w-10 lg:h-10 w-8 h-8 text-center',
+      ' px-2.5 py-1.5 md:px-3.5 md:py-2.5 text-xs md:w-10 md:h-10 w-8 h-8 text-center',
     primary2: base2 + ' px-4 py-3 md:px-8 md:py-4',
     small2: base2 + ' px-4 py-2 md:px-5 md:py-2.5 text-xs',
     round2: base2 + ' px-2.5 py-1.5 md:px-3.5 md:py-2.5 text-xs',
