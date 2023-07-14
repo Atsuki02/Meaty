@@ -28,7 +28,7 @@ function Check() {
         ))}
       </ul>
       <p className="border-t-stone-200 py-10 text-lg font-semibold lg:pr-14 lg:text-right">
-        Toatl : {formatCurrency(totalBillPrice)}
+        Total : {formatCurrency(totalBillPrice)}
       </p>
       <div className="my-6 space-x-4 text-center lg:my-10 lg:space-x-14">
         <Button type="primary" onClick={handlePayBill}>
